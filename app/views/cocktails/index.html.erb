@@ -5,9 +5,14 @@
 <% @cocktails.each do |cocktail| %>
   <ul>
     <li>
-      <%= cocktail.name %>
+      <%= link_to(cocktail) do %>
+        <%= cocktail.name %>
+      <% end %>
     </li>
   </ul>
 <% end %>
+
+<%= link_to 'Create a new Cocktail', new_cocktail_path, class: 'btn btn-primary'%>
+
 
 
