@@ -1,0 +1,13 @@
+<div class="header">
+  <h1>Bienvenue sur Mister Cocktail</h1>
+</div>
+
+<% @cocktails.each do |cocktail| %>
+  <ul>
+    <li>
+      <%= cocktail.name %>
+    </li>
+  </ul>
+<% end %>
+
+
