@@ -5,15 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+puts "-- Destroying all the things!"
+Dose.destroy_all
+Cocktail.destroy_all
 Ingredient.destroy_all
-​
 ingredients = [
 'Angostura Bitter',
 'Bacardi Superior Rum',
 'Banana',
+'Blackcurrant Cordial',
 'Beer',
 'Bitter Lemon',
-'Blackcurrant Cordial',
 'Blackcurrant Juice',
 'Brandy',
 'Brown Sugar',
@@ -67,11 +70,10 @@ ingredients = [
 'White Wine',
 'Worcestershire Sauce'
 ]
-​
+
+puts "-- Creating ingredients"
 ingredients.each { |ingredient| Ingredient.create(name: ingredient) }
-​
-Cocktail.destroy_all
-​
+
 cocktails = [
   {
     name: "Old Fashioned",
@@ -158,5 +160,8 @@ cocktails = [
     picture: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-last-word.jpg"
   }
 ]
-​
+
+puts "-- Creating Cocktails"
 cocktails.each { |cocktail| Cocktail.create(cocktail) }
+
+puts "-- Seed done"
