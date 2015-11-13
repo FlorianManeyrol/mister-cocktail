@@ -13,8 +13,8 @@
         <% end %>
       </h2>
       <h3>
-        <%= image_tag cocktail.picture, class: 'img-resize' %>
-        <%= link_to "Delete", cocktail, method: :delete, class: 'btn btn-danger' %>
+      <%= cl_image_tag cocktail.picture, :width => 300, :height => 200, :crop => :fill %>
+      <%= link_to "Delete", cocktail, method: :delete, class: 'btn btn-danger' %>
       </h3>
     </li>
   </ul>

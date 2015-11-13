@@ -36,6 +36,8 @@ gem 'simple_form'
 gem 'cloudinary'
 gem 'carrierwave'
 
+gem 'figaro'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

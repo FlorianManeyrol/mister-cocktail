@@ -162,6 +162,10 @@ cocktails = [
 ]
 
 puts "-- Creating Cocktails"
-cocktails.each { |cocktail| Cocktail.create(cocktail) }
+cocktails.each do |cocktail|
+  Cocktail.create(name: cocktail[:name], remote_picture_url: cocktail[:picture] )
+end
+
+
 
 puts "-- Seed done"
