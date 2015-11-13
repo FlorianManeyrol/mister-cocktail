@@ -33,6 +33,8 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 # Use Unicorn as the app server
 # gem 'unicorn'
+gem 'cloudinary'
+gem 'carrierwave'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -52,3 +54,4 @@ group :development do
 end
 
 gem 'rspec-rails', group: [ :test ]
+

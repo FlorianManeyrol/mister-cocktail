@@ -1,18 +1,26 @@
-<div class="header">
+<div class="text-center">
   <h1>Bienvenue sur Mister Cocktail</h1>
 </div>
 
+<div class="row">
 <% @cocktails.each do |cocktail| %>
-  <ul>
+  <div class="col-xs-12 col-sm-6">
+  <ul class="list-unstyled">
     <li>
-      <%= link_to(cocktail) do %>
+      <h2>
+        <%= link_to(cocktail) do %>
         <%= cocktail.name %>
-      <% end %>
+        <% end %>
+      </h2>
+      <h3>
+        <%= image_tag cocktail.picture, class: 'img-resize' %>
+        <%= link_to "Delete", cocktail, method: :delete, class: 'btn btn-danger' %>
+      </h3>
     </li>
   </ul>
+  </div>
 <% end %>
-
-<%= link_to 'Create a new Cocktail', new_cocktail_path, class: 'btn btn-primary'%>
+</div>
 
 
 
